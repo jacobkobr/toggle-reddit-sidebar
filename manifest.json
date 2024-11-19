@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Toggle Reddit Sidebar",
+  "version": "1.0",
+  "description": "Hides the Reddit sidebar and saves the state in local storage.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.reddit.com/*"],
+  "action": {
+    "default_popup": "menu.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
